@@ -1,0 +1,129 @@
+# BTVN07 – CHUẨN HÓA TÊN FILE/THƯ MỤC CINEBOOK
+
+## 1. Mục tiêu
+
+Phát hiện lỗi và chuẩn hóa cách đặt tên file/thư mục (Naming Convention), giúp lập trình viên dễ quản lý, tìm kiếm và sử dụng tài nguyên trong dự án CineBook.
+
+---
+
+## 2. Phần 1 – Phân tích vấn đề
+
+### 2.1. `Poster Phim Hài.jpg`
+
+**Lỗi:**
+- Có khoảng trắng.
+- Viết hoa không nhất quán.
+- Chưa tuân thủ quy tắc Naming Convention.
+
+**Vấn đề:**  
+Khoảng trắng gây bất tiện khi thao tác bằng Terminal và một số công cụ lập trình. Tên file cũng chưa thống nhất với quy chuẩn của dự án.
+
+**Tên chuẩn:**
+
+```text
+poster-phim-hai.jpg
+```
+
+---
+
+### 2.2. `Avengers_end_game_final_2.PNG`
+
+**Lỗi:**
+- Đang sử dụng `snake_case` (`_`) trong khi quy ước của bài là `kebab-case`.
+- Phần mở rộng `.PNG` viết hoa, không nhất quán.
+- Tên file có nhiều hậu tố như `final_2`, khó quản lý phiên bản nếu sử dụng lâu dài.
+
+**Tên chuẩn:**
+
+```text
+avengers-end-game-final-2.png
+```
+
+---
+
+### 2.3. `LậtMặt6-Bảnchuẩn.jpeg`
+
+**Lỗi:**
+- Có dấu tiếng Việt.
+- Viết hoa không nhất quán.
+- Các từ chưa được phân tách rõ ràng.
+- Chưa tuân thủ hoàn toàn `kebab-case`.
+
+**Vấn đề:**  
+Ký tự tiếng Việt có dấu có thể gây bất tiện về tính tương thích trong một số công cụ, URL hoặc môi trường lập trình.
+
+**Tên chuẩn:**
+
+```text
+lat-mat-6-ban-chuan.jpeg
+```
+
+---
+
+### 2.4. `icon tài khoản.SVG`
+
+**Lỗi:**
+- Có khoảng trắng.
+- Phần mở rộng `.SVG` viết hoa.
+- Chưa sử dụng `kebab-case`.
+
+**Tên chuẩn:**
+
+```text
+icon-tai-khoan.svg
+```
+
+---
+
+## 3. Phần 2 – Chuẩn hóa tên file
+
+Trong bài này, nhóm lựa chọn quy tắc **kebab-case**.
+
+### Quy tắc kebab-case
+
+- Viết thường.
+- Các từ được phân tách bằng dấu gạch ngang `-`.
+- Không sử dụng khoảng trắng.
+- Không sử dụng dấu tiếng Việt.
+- Phần mở rộng file viết thường.
+- Thống nhất quy tắc trong toàn bộ dự án.
+
+### Bảng kết quả
+
+| Tên file ban đầu | Tên file sau khi chuẩn hóa |
+|---|---|
+| `Poster Phim Hài.jpg` | `poster-phim-hai.jpg` |
+| `Avengers_end_game_final_2.PNG` | `avengers-end-game-final-2.png` |
+| `LậtMặt6-Bảnchuẩn.jpeg` | `lat-mat-6-ban-chuan.jpeg` |
+| `icon tài khoản.SVG` | `icon-tai-khoan.svg` |
+
+---
+
+## 4. Nguyên tắc Naming Convention áp dụng
+
+1. Không sử dụng khoảng trắng trong tên file.
+2. Không sử dụng dấu tiếng Việt.
+3. Sử dụng chữ thường để đảm bảo tính nhất quán.
+4. Sử dụng dấu gạch ngang `-` để phân tách các từ.
+5. Phần mở rộng file nên viết bằng chữ thường.
+6. Không trộn nhiều quy tắc đặt tên trong cùng một dự án.
+7. Đặt tên file rõ ràng, ngắn gọn và thể hiện đúng nội dung.
+
+---
+
+## 5. Kết luận
+
+Việc chuẩn hóa tên file giúp nhóm phát triển CineBook dễ dàng tìm kiếm, quản lý và tham chiếu các tài nguyên trong mã nguồn.
+
+Đồng thời, cách đặt tên thống nhất giúp hạn chế lỗi khi làm việc với **Terminal, Git, URL và các môi trường phát triển khác**.
+
+Sau khi chuẩn hóa, toàn bộ 4 file đều tuân thủ quy tắc **kebab-case**:
+
+```text
+poster-phim-hai.jpg
+avengers-end-game-final-2.png
+lat-mat-6-ban-chuan.jpeg
+icon-tai-khoan.svg
+```
+
+**Quy ước được sử dụng:** `kebab-case`
